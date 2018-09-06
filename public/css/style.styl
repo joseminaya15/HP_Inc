@@ -60,6 +60,7 @@ body
 	margin 0
 	padding 0
 	overflow hidden
+	overflow-y scroll
 	font-family $regular
 	color #FFFFFF
 	background-color #FFFFFF
@@ -75,6 +76,10 @@ label
 	padding 40px 20px
 .js-flex
 	flexCenter()
+	justify-content center
+.js-flex-wrap
+	flexCenter()
+	flex-wrap wrap
 	justify-content center
 .js-flex--start
 	flexStart()
@@ -112,7 +117,7 @@ label
 	transitionMaxWidth()
 	height 100%
 	width 100%
-	max-width 1350px
+	max-width 1150px
 	margin auto
 	color #757575
 .js-input
@@ -175,6 +180,12 @@ label
 	p
 		font-size 16px
 		line-height 16px
+.js-subtitle
+	h2
+		font-size 20px
+		line-height 22px
+		margin 10px 0
+		font-family $regular
 .js-template
 	border 1px solid #a4a1a1
 	padding 20px
@@ -185,6 +196,38 @@ label
 		display inline-block
 		border 1px solid #BEE0F6
 		margin 2px
+.js-fechas
+	border 1px solid #B7B5B5
+	padding 20px
+	.js-fecha
+		flexCenter()
+		border 1px solid #E9EFF4
+		width 100%
+		max-width 350px
+		margin 5px
+		justify-content flex-start
+		padding 20px
+		border-radius 5px
+		.js-fecha__title
+			text-align center
+			h2
+				color #1796D3
+				font-size 42px
+				line-height 38px
+				margin 0
+				font-family $regular
+			span
+				font-size 16px
+		.js-fecha__contenido
+			padding-left 20px
+			h2
+				font-size 18px
+				line-height 20px
+				margin 5px 0
+				color #1A2755
+				font-family $bold
+			a
+				color #97A3B4
 /*SCROLL*/
 ::-webkit-scrollbar
 	width 8px

@@ -152,6 +152,113 @@
                         </div>
                     </div>
                 </div>
+                <div class="js-subtitle">
+                    <h2>Programados</h2>
+                </div>
+                <div class="js-programados">
+                    <div class="js-programados__item js-flex">
+                        <div class="js-flex">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="js-fechas">
+                    <div class="js-subtitle">
+                        <h2>Fechas importantes en camino</h2>
+                        <div class="js-flex-wrap">
+                            <div class="js-fecha">
+                                <div class="js-fecha__title">
+                                    <h2>13</h2>
+                                    <span>mayo</span>
+                                </div>
+                                <div class="js-fecha__contenido">
+                                    <h2>D&iacute;a de la Madre</h2>
+                                    <a>Ver template</a>
+                                </div>
+                            </div>
+                            <div class="js-fecha">
+                                <div class="js-fecha__title">
+                                    <h2>13</h2>
+                                    <span>mayo</span>
+                                </div>
+                                <div class="js-fecha__contenido">
+                                    <h2>D&iacute;a Internacional del Trabajo</h2>
+                                    <a>Ver template</a>
+                                </div>
+                            </div>
+                            <div class="js-fecha">
+                                <div class="js-fecha__title">
+                                    <h2>13</h2>
+                                    <span>mayo</span>
+                                </div>
+                                <div class="js-fecha__contenido">
+                                    <h2>D&iacute;a de la Mujer</h2>
+                                    <a>Ver template</a>
+                                </div>
+                            </div>
+                            <div class="js-fecha">
+                                <div class="js-fecha__title">
+                                    <h2>13</h2>
+                                    <span>mayo</span>
+                                </div>
+                                <div class="js-fecha__contenido">
+                                    <h2>D&iacute;a del Padre</h2>
+                                    <a>Ver template</a>
+                                </div>
+                            </div>
+                            <div class="js-fecha">
+                                <div class="js-fecha__title">
+                                    <h2>13</h2>
+                                    <span>mayo</span>
+                                </div>
+                                <div class="js-fecha__contenido">
+                                    <h2>D&iacute;a del Planeta</h2>
+                                    <a>Ver template</a>
+                                </div>
+                            </div>
+                            <div class="js-fecha">
+                                <div class="js-fecha__title">
+                                    <h2>13</h2>
+                                    <span>mayo</span>
+                                </div>
+                                <div class="js-fecha__contenido">
+                                    <h2>D&iacute;a del Ni&ntilde;o</h2>
+                                    <a>Ver template</a>
+                                </div>
+                            </div>
+                            <div class="js-fecha">
+                                <div class="js-fecha__title">
+                                    <h2>13</h2>
+                                    <span>mayo</span>
+                                </div>
+                                <div class="js-fecha__contenido">
+                                    <h2>D&iacute;a de la Madre</h2>
+                                    <a>Ver template</a>
+                                </div>
+                            </div>
+                            <div class="js-fecha">
+                                <div class="js-fecha__title">
+                                    <h2>13</h2>
+                                    <span>mayo</span>
+                                </div>
+                                <div class="js-fecha__contenido">
+                                    <h2>D&iacute;a de la Madre</h2>
+                                    <a>Ver template</a>
+                                </div>
+                            </div>
+                            <div class="js-fecha">
+                                <div class="js-fecha__title">
+                                    <h2>13</h2>
+                                    <span>mayo</span>
+                                </div>
+                                <div class="js-fecha__contenido">
+                                    <h2>D&iacute;a de la Madre</h2>
+                                    <a>Ver template</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
