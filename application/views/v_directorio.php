@@ -41,6 +41,11 @@
                         </select>
                     </div>
                     <div class="js-input js-select">
+                        <select name="canal" id="canal" title="Buscar canal" onchange=""> 
+                            <?php echo $comboTipo?>
+                        </select>
+                    </div>
+                    <div class="js-input js-select">
                         <select name="tipo" id="tipo" title="Tipo" onchange=""> 
                             <?php echo $comboTipo?>
                         </select>
