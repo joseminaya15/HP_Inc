@@ -50,8 +50,8 @@
                             <?php echo $comboTipo?>
                         </select>
                     </div>
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button">Guardar configuraci&oacute;</button>
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button">Preview</button>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-configuracion">Guardar configuraci&oacute;n</button>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-preview">Preview</button>
                 </div>
                 <div class="row m-t-20">
                     <div class="col-md-6">
