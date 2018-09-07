@@ -35,28 +35,28 @@
                     <p>Elige el estilo de tus comunicaciones</p>
                 </div>
                 <div class="js-menu js-flex">
-                    <div class="js-input js-select">
+                    <div class="js-select">
                         <select name="pais" id="pais" title="País" onchange="cambiaPais();"> 
                             <?php echo $comboPais?>
                         </select>
                     </div>
-                    <div class="js-input js-select">
+                    <div class="js-select">
                         <select name="canal" id="canal" title="Buscar canal" onchange=""> 
                             <?php echo $comboTipo?>
                         </select>
                     </div>
-                    <div class="js-input">
+                    <div class="js-form">
                         <input type="text" id="fechafin" class="form-control" placeholder="Buscar por persona">
                     </div>
-                    <div class="js-input js-select">
+                    <div class="js-select">
                         <select name="tipo" id="tipo" title="Tipo" onchange=""> 
                             <?php echo $comboTipo?>
                         </select>
                     </div>
-                    <div class="js-input">
+                    <div class="js-form">
                         <input type="text" id="fechainicio" class="form-control" placeholder="Fecha de Inicio">
                     </div>
-                    <div class="js-input">
+                    <div class="js-form">
                         <input type="text" id="fechafin" class="form-control" placeholder="Fecha Final">
                     </div>
                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-configuracion">Guardar configuraci&oacute;n</button>
@@ -138,24 +138,45 @@
                             <tbody>
                                 <tr>
                                     <td><a><i class="mdi mdi-visibility"></i>Saludo de Cumplea&ntilde;o</a></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td class="js-flex">
+                                        <div class="js-date">
+                                            <input type="text" id="fechainicio" class="form-control" placeholder="Fecha de Inicio">
+                                        </div>
+                                        <span>al</span>
+                                        <div class="js-date">
+                                            <input type="text" id="fechainicio" class="form-control" placeholder="Fecha Final">
+                                        </div>
+                                    </td>
                                     <td>Usuarios <span class="js-span">23</span></td>
                                     <td><a class="js-reporte">Generar Base<i class="mdi mdi-arrow_downward"></i></a></td>
                                     <td><a class="js-reporte">Reporte<i class="mdi mdi-arrow_downward"></i></a></td>
                                 </tr>
                                 <tr>
                                     <td><a><i class="mdi mdi-visibility"></i>Saludo de Cumplea&ntilde;o</a></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td class="js-flex">
+                                        <div class="js-date">
+                                            <input type="text" id="fechainicio" class="form-control" placeholder="Fecha de Inicio">
+                                        </div>
+                                        <span>al</span>
+                                        <div class="js-date">
+                                            <input type="text" id="fechainicio" class="form-control" placeholder="Fecha Final">
+                                        </div>
+                                    </td>
                                     <td>Usuarios <span class="js-span">54</span></td>
                                     <td><a class="js-reporte">Generar Base<i class="mdi mdi-arrow_downward"></i></a></td>
                                     <td><a class="js-reporte">Reporte<i class="mdi mdi-arrow_downward"></i></a></td>
                                 </tr>
                                 <tr>
                                     <td><a><i class="mdi mdi-visibility"></i>Saludo de Cumplea&ntilde;o</a></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td class="js-flex">
+                                        <div class="js-date">
+                                            <input type="text" id="fechainicio" class="form-control" placeholder="Fecha de Inicio">
+                                        </div>
+                                        <span>al</span>
+                                        <div class="js-date">
+                                            <input type="text" id="fechainicio" class="form-control" placeholder="Fecha Final">
+                                        </div>
+                                    </td>
                                     <td>Usuarios <span class="js-span">250</span></td>
                                     <td><a class="js-reporte">Generar Base<i class="mdi mdi-arrow_downward"></i></a></td>
                                     <td><a class="js-reporte">Reporte<i class="mdi mdi-arrow_downward"></i></a></td>
