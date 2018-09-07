@@ -17,4 +17,10 @@ class M_Directorio extends  CI_Model{
     	$result = $this->db->query($sql);
     	return $result->result();
     }
+    function getUsers($pais, $canal, $persona, $fechaIni, $fechaFin){
+        $sql = "SELECT * 
+                  FROM champion";
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
 }

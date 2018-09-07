@@ -70,7 +70,8 @@
                                         </tr>
                                     </thead>
                                     <tbody id="tablecity">
-                                        <tr>
+                                        <?php echo $bodyUsers?>
+                                        <!-- <tr>
                                             <td class="text-center"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
                                                 <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
                                             </label></td>
@@ -249,7 +250,7 @@
                                                     <li class="mdl-menu__item">Eliminar</li>
                                                 </ul>
                                             </td>
-                                        </tr>
+                                        </tr> -->
                                     </tbody>
                                 </table>
                             </div>
