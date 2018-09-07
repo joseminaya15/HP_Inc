@@ -73,8 +73,15 @@ label
 	font-weight 100
 a
 	text-decoration none
+	cursor pointer
+	i
+		vertical-align middle
 	&:hover
 		text-decoration none
+	&.js-reporte
+		color #4594D0
+		i
+			color #4594D0
 .js-section
 	position relative
 	padding 40px 20px
@@ -254,17 +261,19 @@ a
 	height 280px
 	overflow-y scroll
 	border none
-table
-	&>thead
-		&>tr
-			&>th
-				border none !important
-				font-weight 100
-	&>tbody
-		&>tr
-			&>td
-				border none !important
-				vertical-align middle !important
+.table-responsive
+	border none	
+	table
+		&>thead
+			&>tr
+				&>th
+					border none !important
+					font-weight 100
+		&>tbody
+			&>tr
+				&>td
+					border none !important
+					vertical-align middle !important
 /*SCROLL*/
 ::-webkit-scrollbar
 	width 8px

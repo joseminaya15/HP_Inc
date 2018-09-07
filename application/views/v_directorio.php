@@ -316,12 +316,28 @@
                         <table class="table">
                             <tbody>
                                 <tr>
-                                    <td><a><i class="mdi mdi-"></i>Saludo de Cumplea&ntilde;o</a></td>
+                                    <td><a><i class="mdi mdi-visibility"></i>Saludo de Cumplea&ntilde;o</a></td>
                                     <td></td>
                                     <td></td>
-                                    <td>Usuarios</td>
-                                    <td><a>Generar Base<i class="mdi mdi-arrow_downward"></i></a></td>
-                                    <td><a>Reporte<i class="mdi mdi-arrow_downward"></i></a></td>
+                                    <td>Usuarios <span class="js-span">23</span></td>
+                                    <td><a class="js-reporte">Generar Base<i class="mdi mdi-arrow_downward"></i></a></td>
+                                    <td><a class="js-reporte">Reporte<i class="mdi mdi-arrow_downward"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td><a><i class="mdi mdi-visibility"></i>Saludo de Cumplea&ntilde;o</a></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Usuarios <span class="js-span">54</span></td>
+                                    <td><a class="js-reporte">Generar Base<i class="mdi mdi-arrow_downward"></i></a></td>
+                                    <td><a class="js-reporte">Reporte<i class="mdi mdi-arrow_downward"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td><a><i class="mdi mdi-visibility"></i>Saludo de Cumplea&ntilde;o</a></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Usuarios <span class="js-span">250</span></td>
+                                    <td><a class="js-reporte">Generar Base<i class="mdi mdi-arrow_downward"></i></a></td>
+                                    <td><a class="js-reporte">Reporte<i class="mdi mdi-arrow_downward"></i></a></td>
                                 </tr>
                             </tbody>
                         </table>
