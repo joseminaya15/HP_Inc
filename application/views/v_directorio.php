@@ -274,7 +274,7 @@
                             <p>Elige aqu&iacute; el template a usar</p>
                             <div class="js-card">
                                 <div class="js-card__contenido">
-                                    
+                                    <img src="<?php echo RUTA_IMG?>template/template1.png">
                                 </div>
                                 <div class="js-card__select">
                                     <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
@@ -285,7 +285,7 @@
                             </div>
                             <div class="js-card">
                                 <div class="js-card__contenido">
-                                    
+                                    <img src="<?php echo RUTA_IMG?>template/template2.png">
                                 </div>
                                 <div class="js-card__select">
                                     <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
