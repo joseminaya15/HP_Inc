@@ -257,25 +257,25 @@
                     </div>
                     <div class="col-md-6">
                         <div class="js-template">
-                            <p>Elige aqu&iacute; el template a usar</p>
+                            <p class="m-b-30">Elige aqu&iacute; el template a usar</p>
                             <div class="js-card">
                                 <div class="js-card__contenido">
                                     <img src="<?php echo RUTA_IMG?>template/template1.png">
                                 </div>
                                 <div class="js-card__select">
                                     <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-                                        <input type="radio" id="option-1" class="mdl-radio__button" name="options-1" value="1">
+                                        <input type="radio" id="option-1" class="mdl-radio__button" name="options-1" value="1" onclick="selectTemplate(this.id)">
                                         <span class="mdl-radio__label">Seleccionar</span>
                                     </label>
                                 </div>
                             </div>
-                            <div class="js-card">
+                            <div class="js-card js-transform">
                                 <div class="js-card__contenido">
                                     <img src="<?php echo RUTA_IMG?>template/template2.png">
                                 </div>
                                 <div class="js-card__select">
                                     <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
-                                        <input type="radio" id="option-2" class="mdl-radio__button" name="options-1" value="2" checked>
+                                        <input type="radio" id="option-2" class="mdl-radio__button" name="options-1" value="2" onclick="selectTemplate(this.id)" checked>
                                         <span class="mdl-radio__label">Seleccionar</span>
                                     </label>
                                 </div>
@@ -286,7 +286,7 @@
                                 </div>
                                 <div class="js-card__select">
                                     <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
-                                        <input type="radio" id="option-3" class="mdl-radio__button" name="options-1" value="3">
+                                        <input type="radio" id="option-3" class="mdl-radio__button" name="options-1" value="3" onclick="selectTemplate(this.id)">
                                         <span class="mdl-radio__label">Seleccionar</span>
                                     </label>
                                 </div>

@@ -15,3 +15,7 @@ function cerrarCesion(){
       }
   });
 }
+function selectTemplate(id){
+  $('.js-card').removeClass('js-transform');
+  $('#'+id).parents('.js-card').addClass('js-transform');
+}

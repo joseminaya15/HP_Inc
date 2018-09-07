@@ -14,6 +14,12 @@ flexEnd()
 	display flex
 	display -webkit-flex
 	align-items flex-end
+transitionAll()
+	-webkit-transition all .3s linear
+	-moz-transition all .3s linear
+	-ms-transition all .3s linear
+	-o-transition all .3s linear
+	transition all .3s linear
 transitionOpacity()
 	-webkit-transition opacity .3s linear
 	-moz-transition opacity .3s linear
@@ -39,11 +45,11 @@ transitionBgColor()
 	-o-transition background-color .3s linear
 	transition background-color .3s linear
 transitionTransform()
-	-webkit-transition transform .3s linear
-	-moz-transition transform .3s linear
-	-ms-transition transform .3s linear
-	-o-transition transform .3s linear
-	transition transform .3s linear
+	-webkit-transition transform .2s linear
+	-moz-transition transform .2s linear
+	-ms-transition transform .2s linear
+	-o-transition transform .2s linear
+	transition transform .2s linear
 absolute()
 	position absolute
 	top 0
@@ -215,14 +221,25 @@ a
 	padding 10px
 .js-template
 	border 1px solid #a4a1a1
-	padding 20px
+	padding 15px 10px 50px 10px
 	text-align center
 	.js-card
+		transitionTransform()
 		width 100%
-		max-width 200px
+		max-width 160px
 		display inline-block
+		background-color #FFFFFF
 		border 1px solid #BEE0F6
-		margin 2px
+		margin 3px
+		&.js-transform
+			z-index 10
+			-webkit-transform scale(1.2)
+			   -moz-transform scale(1.2)
+			    -ms-transform scale(1.2)
+			     -o-transform scale(1.2)
+			        transform scale(1.2)
+		.js-card__select
+			margin 20px 0 10px 0	
 .js-fechas
 	border 1px solid #B7B5B5
 	padding 20px
