@@ -19,6 +19,7 @@ class Directorio extends CI_Controller {
         $paises     = $this->M_Directorio->getPaises();
         $tipo       = $this->M_Directorio->getTipoMensaje();
         $users      = $this->M_Directorio->getUsers(null,null,null,null,null);
+        $totaUser   = count($users);
         foreach ($paises as $key) {
             $comboPais .= '<option value="'.$key->nombre.'">'.$key->nombre.'</option>';
         }
@@ -45,6 +46,7 @@ class Directorio extends CI_Controller {
                                </td>
                            </tr>';
         }
+        $data['totaUser']  = $totaUser;
         $data['comboPais'] = $comboPais;
         $data['comboTipo'] = $comboTipo;
         $data['bodyUsers'] = $bodyUsers;
