@@ -1,15 +1,15 @@
-function cambiaPais() {
-	var pais = $('#pais').val();
-	var tipo = $('#tipo').val();
+function buscador() {
+	var pais  = $('#pais').val();
+	var canal = $('#canal').val();
 	// var pais = $('#pais').val();
 	// var pais = $('#pais').val();
 	// var pais = $('#pais').val();
 	// var pais = $('#pais').val();
 	// var pais = $('#pais').val();
 	$.ajax({
-		data: { pais : pais,
-				tipo : tipo },
-		url:  'directorio/changePais',
+		data: { pais  : pais,
+				canal : canal },
+		url:  'directorio/buscador',
 		type: 'POST'
 	}).done(function(data){
 		try{
@@ -19,6 +19,9 @@ function cambiaPais() {
 				$('#totalUser').text(data.totaUser);
 				$('#bodyUsers').html('');
 				$('#bodyUsers').append(data.htmlBody);
+				$('#canal').html('');
+				$('#canal').append(data.comboCanal);
+				console.log(data.comboCanal);
 			} else {
 		        toastr.remove();
 		        msj('error', data.error);

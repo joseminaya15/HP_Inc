@@ -14,10 +14,12 @@ class Directorio extends CI_Controller {
     }
 	public function index(){
         $comboTipo  = '';
+        $comboCanal = '';
         $comboPais  = '<option value="">Seleccionar Todo</option>';
         $bodyUsers  = '';
         $paises     = $this->M_Directorio->getPaises();
         $tipo       = $this->M_Directorio->getTipoMensaje();
+        $canal      = $this->M_Directorio->getCanales(null);
         $users      = $this->M_Directorio->getUsers(null,null,null,null,null);
         $totaUser   = count($users);
         $contador   = 1;
@@ -26,6 +28,9 @@ class Directorio extends CI_Controller {
         }
         foreach ($tipo as $key) {
             $comboTipo .= '<option value="'.$key->tipo_saludo.'">'.$key->tipo_saludo.'</option>';
+        }
+        foreach ($canal as $key) {
+            $comboCanal .= '<option value="'.$key->empresa.'">'.$key->empresa.'</option>';
         }
         foreach ($users as $key) {
             $bodyUsers .= '<tr>
@@ -48,10 +53,11 @@ class Directorio extends CI_Controller {
                            </tr>';
             $contador++;
         }
-        $data['totaUser']  = $totaUser;
-        $data['comboPais'] = $comboPais;
-        $data['comboTipo'] = $comboTipo;
-        $data['bodyUsers'] = $bodyUsers;
+        $data['totaUser']   = $totaUser;
+        $data['comboPais']  = $comboPais;
+        $data['comboCanal'] = $comboCanal;
+        $data['comboTipo']  = $comboTipo;
+        $data['bodyUsers']  = $bodyUsers;
 		$this->load->view('v_directorio', $data);
 	}
     function cerrarCesion(){
@@ -65,16 +71,17 @@ class Directorio extends CI_Controller {
         }
         echo json_encode($data);
     }
-    function changePais(){
+    function buscador(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
             $bodyUsers  = '';
+            $comboCanal = '';
             $pais       = $this->input->post('pais');
-            $tipo       = $this->input->post('tipo');
-            $users      = $this->M_Directorio->getUsers($pais,null,null,null,null);
+            $canal      = $this->input->post('canal');
+            $users      = $this->M_Directorio->getUsers($pais,$canal,null,null,null);
+            $canal      = $this->M_Directorio->getCanales($pais);
             $totaUser   = count($users);
-            // print_r($this->db->last_query());
             $contador   = 1;
             foreach ($users as $key) {
                 $bodyUsers .= '<tr>
@@ -97,9 +104,13 @@ class Directorio extends CI_Controller {
                                </tr>';
                 $contador++;
             }
-            $data['htmlBody'] = $bodyUsers;
-            $data['totaUser'] = $totaUser;
-            $data['error']    = EXIT_SUCCESS;
+            foreach ($canal as $key) {
+                $comboCanal .= '<option value="'.$key->empresa.'">'.$key->empresa.'</option>';
+            }
+            $data['htmlBody']   = $bodyUsers;
+            $data['totaUser']   = $totaUser;
+            $data['comboCanal'] = $comboCanal;
+            $data['error']      = EXIT_SUCCESS;
         } catch (Exception $e){
             $data['msj'] = $e->getMessage();
         }

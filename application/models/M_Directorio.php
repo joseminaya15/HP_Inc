@@ -32,4 +32,18 @@ class M_Directorio extends  CI_Model{
         $result = $this->db->query($sql);
         return $result->result();
     }
+    function getCanales($pais) {
+        if ($pais == null) {
+            $sql = "SELECT empresa 
+                      FROM champion
+                  GROUP BY empresa";
+        } else {
+            $sql = "SELECT empresa 
+                      FROM champion
+                     WHERE pais LIKE '%".$pais."%'
+                  GROUP BY empresa";
+        }
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
 }

@@ -35,14 +35,14 @@
                     <p>Elige el estilo de tus comunicaciones</p>
                 </div>
                 <div class="js-menu js-flex">
-                    <div class="js-select">
-                        <select name="pais" id="pais" title="País" onchange="cambiaPais();"> 
+                    <div class="js-input js-select">
+                        <select name="pais" id="pais" title="País" onchange="buscador();"> 
                             <?php echo $comboPais?>
                         </select>
                     </div>
-                    <div class="js-select">
-                        <select name="canal" id="canal" title="Buscar canal" onchange=""> 
-                            <?php echo $comboTipo?>
+                    <div class="js-input js-select">
+                        <select name="canal" id="canal" title="Buscar canal" onchange="buscador();"> 
+                            <?php echo $comboCanal?>
                         </select>
                     </div>
                     <div class="js-form">
