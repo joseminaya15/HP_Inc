@@ -45,10 +45,19 @@
                             <?php echo $comboTipo?>
                         </select>
                     </div>
+                    <div class="js-input">
+                        <input type="text" id="fechafin" class="form-control" placeholder="Buscar por persona">
+                    </div>
                     <div class="js-input js-select">
                         <select name="tipo" id="tipo" title="Tipo" onchange=""> 
                             <?php echo $comboTipo?>
                         </select>
+                    </div>
+                    <div class="js-input">
+                        <input type="text" id="fechainicio" class="form-control" placeholder="Fecha de Inicio">
+                    </div>
+                    <div class="js-input">
+                        <input type="text" id="fechafin" class="form-control" placeholder="Fecha Final">
                     </div>
                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-configuracion">Guardar configuraci&oacute;n</button>
                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-preview">Preview</button>
