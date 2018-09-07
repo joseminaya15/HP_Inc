@@ -36,7 +36,7 @@
                 </div>
                 <div class="js-menu js-flex">
                     <div class="js-input js-select">
-                        <select name="pais" id="pais" title="País" onchange=""> 
+                        <select name="pais" id="pais" title="País" onchange="cambiaPais();"> 
                             <?php echo $comboPais?>
                         </select>
                     </div>
@@ -74,7 +74,7 @@
                                             <th class="text-center">Acci&oacute;n</th>
                                         </tr>
                                     </thead>
-                                    <tbody id="tablecity">
+                                    <tbody id="bodyUsers">
                                         <?php echo $bodyUsers?>
                                     </tbody>
                                 </table>
@@ -263,5 +263,6 @@
         <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jsindex.js?v=<?php echo time();?>"></script>
+        <script src="<?php echo RUTA_JS?>directorio.js?v=<?php echo time();?>"></script>
     </body>
 </html>

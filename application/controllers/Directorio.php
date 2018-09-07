@@ -65,4 +65,44 @@ class Directorio extends CI_Controller {
         }
         echo json_encode($data);
     }
+    function changePais(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {
+            $bodyUsers  = '';
+            $pais       = $this->input->post('pais');
+            $tipo       = $this->input->post('tipo');
+            $users      = $this->M_Directorio->getUsers($pais,null,null,null,null);
+            $totaUser   = count($users);
+            // print_r($this->db->last_query());
+            $contador   = 1;
+            foreach ($users as $key) {
+                $bodyUsers .= '<tr>
+                                   <td class="text-center"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-'.$contador.'">
+                                       <input type="checkbox" id="checkbox-'.$contador.'" class="mdl-checkbox__input">
+                                   </label></td>
+                                   <td class="js-flex"><img class="js-image" src="'.RUTA_IMG.'user/user2.jpg"><span>'.$key->nombre_completo.'</span></td>
+                                   <td>'.$key->pais.'</td>
+                                   <td>'.$key->empresa.'</td>
+                                   <td>'.$key->cumpleanos.'</td>
+                                   <td class="text-center">
+                                       <button id="menu-'.$contador.'" class="mdl-button mdl-js-button mdl-button--icon">
+                                           <i class="mdi mdi-more_vert"></i>
+                                       </button>
+                                       <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu-'.$contador.'">
+                                           <li class="mdl-menu__item">Editar</li>
+                                           <li class="mdl-menu__item">Eliminar</li>
+                                       </ul>
+                                   </td>
+                               </tr>';
+                $contador++;
+            }
+            $data['htmlBody'] = $bodyUsers;
+            $data['totaUser'] = $totaUser;
+            $data['error']    = EXIT_SUCCESS;
+        } catch (Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($data);
+    }
 }
