@@ -71,12 +71,15 @@ p
 	font-size 18px
 label
 	font-weight 100
+a
+	text-decoration none
+	&:hover
+		text-decoration none
 .js-section
 	position relative
 	padding 40px 20px
 .js-flex
 	flexCenter()
-	justify-content center
 .js-flex-wrap
 	flexCenter()
 	flex-wrap wrap
@@ -129,21 +132,28 @@ label
 		font-family $regular
 		color #000000
 .js-select
-	&.js-standar
-		margin 5px 0
-		.bootstrap-select
-			width 100% !important
-			.btn-default
-				background-color #FFFFFF
-				color #757575
-				height 46px
-				border-radius 0
+	.bootstrap-select
+		width 100% !important
+.js-span
+	background-color #125AA2
+	color #FFFFFF
+	padding 3px 5px
+	border-radius 50%
 .js-button
 	border-radius 5px
 	text-transform initial
 	color #FFFFFF
 	font-family $regular
-	font-size 16px	
+	font-size 16px
+.js-usuarios--menu
+	text-align center
+	.js-button--usuario
+		color #576372
+		font-family $bold
+		font-size 13px
+		padding 0 10px
+		box-shadow none
+		background-color transparent !important	
 .js-login
 	width 100%
 	max-width 400px
@@ -180,12 +190,21 @@ label
 	p
 		font-size 16px
 		line-height 16px
+.js-menu
+	padding 20px 0
 .js-subtitle
 	h2
 		font-size 20px
 		line-height 22px
 		margin 10px 0
 		font-family $regular
+.js-image
+	border-radius 50%
+	max-width 35px
+	margin-right 10px
+.js-usuarios
+	border 1px solid #a4a1a1
+	padding 10px
 .js-template
 	border 1px solid #a4a1a1
 	padding 20px
@@ -228,6 +247,24 @@ label
 				font-family $bold
 			a
 				color #97A3B4
+.js-programados
+	border-top 1px solid #b7b5b5
+	border-bottom 1px solid #b7b5b5
+.js-table
+	height 280px
+	overflow-y scroll
+	border none
+table
+	&>thead
+		&>tr
+			&>th
+				border none !important
+				font-weight 100
+	&>tbody
+		&>tr
+			&>td
+				border none !important
+				vertical-align middle !important
 /*SCROLL*/
 ::-webkit-scrollbar
 	width 8px

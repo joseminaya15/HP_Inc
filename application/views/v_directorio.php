@@ -25,7 +25,7 @@
         <div class="js-header">
             <div class="js-header--left">
                 <img src="<?php echo RUTA_IMG?>logo/hp-logo.png">
-                <p>Directorio de Marketing</p>
+                <p>Planificador de Comunicaciones</p>
             </div>
         </div>
         <section class="js-section m-t-30">
@@ -34,83 +34,239 @@
                     <h2>Comunicados Editor</h2>
                     <p>Elige el estilo de tus comunicaciones</p>
                 </div>
+                <div class="js-menu js-flex">
+                    <div class="js-input js-select">
+                        <select name="pais" id="pais" title="País" onchange=""> 
+                            <option value="">Seleccionar Todo</option>
+                            <option value="Costa Rica">Costa Rica</option>
+                            <option value="República Dominicana">Rep&uacute;blica Dominicana</option>
+                            <option value="Ecuador">Ecuador</option>
+                            <option value="El Salvador">El Salvador</option>
+                            <option value="Guatemala">Guatemala</option>
+                            <option value="Honduras">Honduras</option>
+                            <option value="Nicaragua">Nicaragua</option>
+                            <option value="Panamá">Panamá</option>
+                            <option value="Puerto Rico">Puerto Rico</option>
+                            <option value="Estados Unidos">Estados Unidos</option>
+                            <option value="Venezuela">Venezuela</option>
+                        </select>
+                    </div>
+                    <div class="js-input js-select">
+                        <select name="tipo" id="tipo" title="Tipo" onchange=""> 
+                            <option value="Sesonals">Sesonals</option>
+                            <option value="Saludo Cumpleaños">Saludo Cumplea&ntilde;os</option>
+                            <option value="Saludo Aniversario">Saludo Aniversario</option>
+                            <option value="Saludo Buen Negocio">Saludo Buen Negocio</option>
+                        </select>
+                    </div>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button">Guardar configuraci&oacute;</button>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button">Preview</button>
+                </div>
                 <div class="row m-t-20">
                     <div class="col-md-6">
-                        <div class="table-responsive">
-                            <table id="example" class="display nowrap table table-bordered table-hover dt-responsive" cellspacing="0" width="100%">
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th class="text-left">Usuario</th>
-                                        <th class="text-left">Pá&iacute;s</th>
-                                        <th class="text-left">Canal/Empresa</th>
-                                        <th class="text-left">Cumplea&ntilde;os</th>
-                                        <td class="text-center">Acci&oacute;n</td>
-                                    </tr>
-                                </thead>
-                                <tbody id="tablecity">
-                                    <tr>
-                                        <td class="text-center"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
-                                            <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
-                                        </label></td>
-                                        <td>Anna K.</td>
-                                        <td>Panam&aacute;</td>
-                                        <td>Yoytec Computer, S.A</td>
-                                        <td>7/7/18</td>
-                                        <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
-                                            <i class="mdi mdi-more_vert"></i>
-                                        </button></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
-                                            <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
-                                        </label></td>
-                                        <td>Bethany D.</td>
-                                        <td>Costa Rica</td>
-                                        <td>Tecnasa</td>
-                                        <td>7/7/18</td>
-                                        <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
-                                            <i class="mdi mdi-more_vert"></i>
-                                        </button></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-3">
-                                            <input type="checkbox" id="checkbox-3" class="mdl-checkbox__input">
-                                        </label></td>
-                                        <td>Luke C.</td>
-                                        <td>Costa Rica</td>
-                                        <td>Tecnasa</td>
-                                        <td>10/7/18</td>
-                                        <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
-                                            <i class="mdi mdi-more_vert"></i>
-                                        </button></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-4">
-                                            <input type="checkbox" id="checkbox-4" class="mdl-checkbox__input">
-                                        </label></td>
-                                        <td>Sthephen O.</td>
-                                        <td>El Salvador</td>
-                                        <td>Tecnasa</td>
-                                        <td>12/7/18</td>
-                                        <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
-                                            <i class="mdi mdi-more_vert"></i>
-                                        </button></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-5">
-                                            <input type="checkbox" id="checkbox-5" class="mdl-checkbox__input">
-                                        </label></td>
-                                        <td>Tyler O.</td>
-                                        <td>Ecuador</td>
-                                        <td>Tecnasa</td>
-                                        <td>27/7/18</td>
-                                        <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
-                                            <i class="mdi mdi-more_vert"></i>
-                                        </button></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="js-usuarios">
+                            <div class="js-usuarios--menu">
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button--usuario">Seleccionar Todo</button>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button--usuario">Borrar Selecci&Oacute;n</button>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button--usuario">Mostrar solo seleccionados</button>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button--usuario">Limpiar</button>
+                            </div>
+                            <div class="table-responsive js-table">
+                                <table id="example" class="display nowrap table table-hover dt-responsive" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th class="text-left">Usuario <span class="js-span">222</span></th>
+                                            <th class="text-left">Pá&iacute;s</th>
+                                            <th class="text-left">Canal/Empresa</th>
+                                            <th class="text-left">Cumplea&ntilde;os</th>
+                                            <th class="text-center">Acci&oacute;n</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tablecity">
+                                        <tr>
+                                            <td class="text-center"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+                                                <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
+                                            </label></td>
+                                            <td class="js-flex"><img class="js-image" src="<?php echo RUTA_IMG?>user/user1.jpg"><span>Anna K.</span></td>
+                                            <td>Panam&aacute;</td>
+                                            <td>Yoytec Computer, S.A</td>
+                                            <td>7/7/18</td>
+                                            <td class="text-center">
+                                                <button id="menu-1" class="mdl-button mdl-js-button mdl-button--icon">
+                                                    <i class="mdi mdi-more_vert"></i>
+                                                </button>
+                                                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu-1">
+                                                    <li class="mdl-menu__item">Editar</li>
+                                                    <li class="mdl-menu__item">Eliminar</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+                                                <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
+                                            </label></td>
+                                            <td class="js-flex"><img class="js-image" src="<?php echo RUTA_IMG?>user/user2.jpg"><span>Bethany D.</span></td>
+                                            <td>Costa Rica</td>
+                                            <td>Tecnasa</td>
+                                            <td>7/7/18</td>
+                                            <td class="text-center">
+                                                <button id="menu-2" class="mdl-button mdl-js-button mdl-button--icon">
+                                                    <i class="mdi mdi-more_vert"></i>
+                                                </button>
+                                                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu-2">
+                                                    <li class="mdl-menu__item">Editar</li>
+                                                    <li class="mdl-menu__item">Eliminar</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-3">
+                                                <input type="checkbox" id="checkbox-3" class="mdl-checkbox__input">
+                                            </label></td>
+                                            <td class="js-flex"><img class="js-image" src="<?php echo RUTA_IMG?>user/user3.jpg"><span>Luke C.</span></td>
+                                            <td>Costa Rica</td>
+                                            <td>Tecnasa</td>
+                                            <td>10/7/18</td>
+                                            <td class="text-center">
+                                                <button id="menu-3" class="mdl-button mdl-js-button mdl-button--icon">
+                                                    <i class="mdi mdi-more_vert"></i>
+                                                </button>
+                                                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu-3">
+                                                    <li class="mdl-menu__item">Editar</li>
+                                                    <li class="mdl-menu__item">Eliminar</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-4">
+                                                <input type="checkbox" id="checkbox-4" class="mdl-checkbox__input">
+                                            </label></td>
+                                            <td class="js-flex"><img class="js-image" src="<?php echo RUTA_IMG?>user/user4.jpg"><span>Sthephen O.</span></td>
+                                            <td>El Salvador</td>
+                                            <td>Tecnasa</td>
+                                            <td>12/7/18</td>
+                                            <td class="text-center">
+                                                <button id="menu-4" class="mdl-button mdl-js-button mdl-button--icon">
+                                                    <i class="mdi mdi-more_vert"></i>
+                                                </button>
+                                                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu-4">
+                                                    <li class="mdl-menu__item">Editar</li>
+                                                    <li class="mdl-menu__item">Eliminar</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-5">
+                                                <input type="checkbox" id="checkbox-5" class="mdl-checkbox__input">
+                                            </label></td>
+                                            <td class="js-flex"><img class="js-image" src="<?php echo RUTA_IMG?>user/user5.jpg"><span>Tyler O.</span></td>
+                                            <td>Ecuador</td>
+                                            <td>Tecnasa</td>
+                                            <td>27/7/18</td>
+                                            <td class="text-center">
+                                                <button id="menu-5" class="mdl-button mdl-js-button mdl-button--icon">
+                                                    <i class="mdi mdi-more_vert"></i>
+                                                </button>
+                                                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu-5">
+                                                    <li class="mdl-menu__item">Editar</li>
+                                                    <li class="mdl-menu__item">Eliminar</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-6">
+                                                <input type="checkbox" id="checkbox-6" class="mdl-checkbox__input">
+                                            </label></td>
+                                            <td class="js-flex"><img class="js-image" src="<?php echo RUTA_IMG?>user/user1.jpg"><span>Anna K.</span></td>
+                                            <td>Panam&aacute;</td>
+                                            <td>Yoytec Computer, S.A</td>
+                                            <td>7/7/18</td>
+                                            <td class="text-center">
+                                                <button id="menu-6" class="mdl-button mdl-js-button mdl-button--icon">
+                                                    <i class="mdi mdi-more_vert"></i>
+                                                </button>
+                                                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu-6">
+                                                    <li class="mdl-menu__item">Editar</li>
+                                                    <li class="mdl-menu__item">Eliminar</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-7">
+                                                <input type="checkbox" id="checkbox-7" class="mdl-checkbox__input">
+                                            </label></td>
+                                            <td class="js-flex"><img class="js-image" src="<?php echo RUTA_IMG?>user/user2.jpg"><span>Bethany D.</span></td>
+                                            <td>Costa Rica</td>
+                                            <td>Tecnasa</td>
+                                            <td>7/7/18</td>
+                                            <td class="text-center">
+                                                <button id="menu-7" class="mdl-button mdl-js-button mdl-button--icon">
+                                                    <i class="mdi mdi-more_vert"></i>
+                                                </button>
+                                                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu-7">
+                                                    <li class="mdl-menu__item">Editar</li>
+                                                    <li class="mdl-menu__item">Eliminar</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-8">
+                                                <input type="checkbox" id="checkbox-8" class="mdl-checkbox__input">
+                                            </label></td>
+                                            <td class="js-flex"><img class="js-image" src="<?php echo RUTA_IMG?>user/user3.jpg"><span>Luke C.</span></td>
+                                            <td>Costa Rica</td>
+                                            <td>Tecnasa</td>
+                                            <td>10/7/18</td>
+                                            <td class="text-center">
+                                                <button id="menu-8" class="mdl-button mdl-js-button mdl-button--icon">
+                                                    <i class="mdi mdi-more_vert"></i>
+                                                </button>
+                                                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu-8">
+                                                    <li class="mdl-menu__item">Editar</li>
+                                                    <li class="mdl-menu__item">Eliminar</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-9">
+                                                <input type="checkbox" id="checkbox-9" class="mdl-checkbox__input">
+                                            </label></td>
+                                            <td class="js-flex"><img class="js-image" src="<?php echo RUTA_IMG?>user/user4.jpg"><span>Sthephen O.</span></td>
+                                            <td>El Salvador</td>
+                                            <td>Tecnasa</td>
+                                            <td>12/7/18</td>
+                                            <td class="text-center">
+                                                <button id="menu-9" class="mdl-button mdl-js-button mdl-button--icon">
+                                                    <i class="mdi mdi-more_vert"></i>
+                                                </button>
+                                                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu-9">
+                                                    <li class="mdl-menu__item">Editar</li>
+                                                    <li class="mdl-menu__item">Eliminar</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-10">
+                                                <input type="checkbox" id="checkbox-10" class="mdl-checkbox__input">
+                                            </label></td>
+                                            <td class="js-flex"><img class="js-image" src="<?php echo RUTA_IMG?>user/user5.jpg"><span>Tyler O.</span></td>
+                                            <td>Ecuador</td>
+                                            <td>Tecnasa</td>
+                                            <td>27/7/18</td>
+                                            <td class="text-center">
+                                                <button id="menu-10" class="mdl-button mdl-js-button mdl-button--icon">
+                                                    <i class="mdi mdi-more_vert"></i>
+                                                </button>
+                                                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu-10">
+                                                    <li class="mdl-menu__item">Editar</li>
+                                                    <li class="mdl-menu__item">Eliminar</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -156,10 +312,19 @@
                     <h2>Programados</h2>
                 </div>
                 <div class="js-programados">
-                    <div class="js-programados__item js-flex">
-                        <div class="js-flex">
-                            
-                        </div>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td><a><i class="mdi mdi-"></i>Saludo de Cumplea&ntilde;o</a></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Usuarios</td>
+                                    <td><a>Generar Base<i class="mdi mdi-arrow_downward"></i></a></td>
+                                    <td><a>Reporte<i class="mdi mdi-arrow_downward"></i></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 <div class="js-fechas">
@@ -268,6 +433,7 @@
         <script src="<?php echo RUTA_PLUGINS?>bootstrap-select/js/i18n/defaults-es_ES.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>mdl/material.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
+        <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jsindex.js?v=<?php echo time();?>"></script>
     </body>
 </html>

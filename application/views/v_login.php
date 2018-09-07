@@ -25,13 +25,13 @@
         <div class="js-header">
             <div class="js-header--left">
                 <img src="<?php echo RUTA_IMG?>logo/hp-logo.png">
-                <p>Marketing al d&iacute;a</p>
+                <p>Planificador de Comunicaciones</p>
             </div>
         </div>
         <section class="js-section js-height">
             <div class="js-container js-flex">
                 <div class="js-login">
-                    <h2>Construyendo un mejor equipo</h2>
+                    <h2>No dejes para ma&ntilde;ana lo que puedes gestionar hoy</h2>
                     <div class="js-input">
                         <input type="text" id="usuario" class="form-control" placeholder="Correo" onkeyup="verificarDatos(event);">
                     </div>
