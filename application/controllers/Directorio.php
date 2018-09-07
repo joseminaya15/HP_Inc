@@ -20,6 +20,7 @@ class Directorio extends CI_Controller {
         $tipo       = $this->M_Directorio->getTipoMensaje();
         $users      = $this->M_Directorio->getUsers(null,null,null,null,null);
         $totaUser   = count($users);
+        $contador   = 1;
         foreach ($paises as $key) {
             $comboPais .= '<option value="'.$key->nombre.'">'.$key->nombre.'</option>';
         }
@@ -28,23 +29,24 @@ class Directorio extends CI_Controller {
         }
         foreach ($users as $key) {
             $bodyUsers .= '<tr>
-                               <td class="text-center"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
-                                   <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
+                               <td class="text-center"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-'.$contador.'">
+                                   <input type="checkbox" id="checkbox-'.$contador.'" class="mdl-checkbox__input">
                                </label></td>
                                <td class="js-flex"><img class="js-image" src="'.RUTA_IMG.'user/user2.jpg"><span>'.$key->nombre_completo.'</span></td>
                                <td>'.$key->pais.'</td>
                                <td>'.$key->empresa.'</td>
                                <td>'.$key->cumpleanos.'</td>
                                <td class="text-center">
-                                   <button id="menu-1" class="mdl-button mdl-js-button mdl-button--icon">
+                                   <button id="menu-'.$contador.'" class="mdl-button mdl-js-button mdl-button--icon">
                                        <i class="mdi mdi-more_vert"></i>
                                    </button>
-                                   <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu-1">
+                                   <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu-'.$contador.'">
                                        <li class="mdl-menu__item">Editar</li>
                                        <li class="mdl-menu__item">Eliminar</li>
                                    </ul>
                                </td>
                            </tr>';
+            $contador++;
         }
         $data['totaUser']  = $totaUser;
         $data['comboPais'] = $comboPais;
