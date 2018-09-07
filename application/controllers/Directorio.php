@@ -5,6 +5,7 @@ class Directorio extends CI_Controller {
 
 	function __construct() {
         parent::__construct();
+        $this->load->model('M_Directorio');
         $this->load->helper("url");//BORRAR CACHÉ DE LA PÁGINA
         $this->output->set_header('Last-Modified:'.gmdate('D, d M Y H:i:s').'GMT');
         $this->output->set_header('Cache-Control: no-store, no-cache, must-revalidate');
@@ -12,7 +13,19 @@ class Directorio extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 	public function index(){
-		$this->load->view('v_directorio');
+        $comboTipo  = '';
+        $comboPais  = '<option value="">Seleccionar Todo</option>';
+        $paises     = $this->M_Directorio->getPaises();
+        $tipo       = $this->M_Directorio->getTipoMensaje();
+        foreach ($paises as $key) {
+            $comboPais .= '<option value="'.$key->nombre.'">'.$key->nombre.'</option>';
+        }
+        foreach ($tipo as $key) {
+            $comboTipo .= '<option value="'.$key->tipo_saludo.'">'.$key->tipo_saludo.'</option>';
+        }
+        $data['comboPais'] = $comboPais;
+        $data['comboTipo'] = $comboTipo;
+		$this->load->view('v_directorio', $data);
 	}
     function cerrarCesion(){
         $data['error'] = EXIT_ERROR;

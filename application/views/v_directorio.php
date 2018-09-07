@@ -37,26 +37,12 @@
                 <div class="js-menu js-flex">
                     <div class="js-input js-select">
                         <select name="pais" id="pais" title="País" onchange=""> 
-                            <option value="">Seleccionar Todo</option>
-                            <option value="Costa Rica">Costa Rica</option>
-                            <option value="República Dominicana">Rep&uacute;blica Dominicana</option>
-                            <option value="Ecuador">Ecuador</option>
-                            <option value="El Salvador">El Salvador</option>
-                            <option value="Guatemala">Guatemala</option>
-                            <option value="Honduras">Honduras</option>
-                            <option value="Nicaragua">Nicaragua</option>
-                            <option value="Panamá">Panamá</option>
-                            <option value="Puerto Rico">Puerto Rico</option>
-                            <option value="Estados Unidos">Estados Unidos</option>
-                            <option value="Venezuela">Venezuela</option>
+                            <?php echo $comboPais?>
                         </select>
                     </div>
                     <div class="js-input js-select">
                         <select name="tipo" id="tipo" title="Tipo" onchange=""> 
-                            <option value="Sesonals">Sesonals</option>
-                            <option value="Saludo Cumpleaños">Saludo Cumplea&ntilde;os</option>
-                            <option value="Saludo Aniversario">Saludo Aniversario</option>
-                            <option value="Saludo Buen Negocio">Saludo Buen Negocio</option>
+                            <?php echo $comboTipo?>
                         </select>
                     </div>
                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button">Guardar configuraci&oacute;</button>
