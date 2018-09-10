@@ -49,6 +49,11 @@
                     </div>
                     <div class="js-form">
                         <input type="text" id="persona" class="form-control" placeholder="Buscar por persona" onchange="buscador();">
+                        <div class="js-icon">
+                            <button class="mdl-button mdl-js-button mdl-button--icon">
+                                <i class="mdi mdi-search"></i>
+                            </button>
+                        </div>
                     </div>
                     <div class="js-select">
                         <select name="tipo" id="tipo" title="Tipo" onchange="buscadorTipo();"> 
