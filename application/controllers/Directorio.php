@@ -23,6 +23,10 @@ class Directorio extends CI_Controller {
         $users      = $this->M_Directorio->getUsers(null,null,null,null,null);
         $totaUser   = count($users);
         $contador   = 1;
+        $nombre     = '';
+        $primer_ap  = '';
+        $nombre_nu  = '';
+        $cont       = '';
         foreach ($paises as $key) {
             $comboPais .= '<option value="'.$key->nombre.'">'.$key->nombre.'</option>';
         }
@@ -33,11 +37,20 @@ class Directorio extends CI_Controller {
             $comboCanal .= '<option value="'.$key->empresa.'">'.$key->empresa.'</option>';
         }
         foreach ($users as $key) {
+            $nombre     = explode(' ',$key->nombre_completo);
+            $cont       = count($nombre);
+            if ($cont > 2 ) {
+                $primer_ap = str_split($nombre[$cont-2]);
+                $nombre_nu = $nombre[0].' '.$primer_ap[0].'.';
+            } else {
+                $primer_ap = str_split($nombre[$cont-1]);
+                $nombre_nu = $nombre[0].' '.$primer_ap[0].'.';
+            }
             $bodyUsers .= '<tr>
                                <td class="text-center"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-'.$contador.'">
                                    <input type="checkbox" id="checkbox-'.$contador.'" class="mdl-checkbox__input">
                                </label></td>
-                               <td class="js-flex"><img class="js-image" src="'.RUTA_IMG.'user/user2.jpg"><span>'.$key->nombre_completo.'</span></td>
+                               <td class="js-flex"><img class="js-image" src="'.RUTA_IMG.'user/user2.jpg"><span>'.$nombre_nu.'</span></td>
                                <td>'.$key->pais.'</td>
                                <td>'.$key->empresa.'</td>
                                <td>'.$key->cumpleanos.'</td>
@@ -80,16 +93,31 @@ class Directorio extends CI_Controller {
             $pais       = $this->input->post('pais');
             $canal      = $this->input->post('canal');
             $persona    = $this->input->post('persona');
-            $users      = $this->M_Directorio->getUsers($pais,$canal,$persona,null,null);
+            $fechaIni   = $this->input->post('fechaIni');
+            $fechaFin   = $this->input->post('fechaFin');
+            $users      = $this->M_Directorio->getUsers($pais,$canal,$persona,$fechaIni,$fechaFin);
             $canal      = $this->M_Directorio->getCanales($pais);
             $totaUser   = count($users);
             $contador   = 1;
+            $nombre     = '';
+            $primer_ap  = '';
+            $nombre_nu  = '';
+            $cont       = '';
             foreach ($users as $key) {
+                $nombre     = explode(' ',$key->nombre_completo);
+                $cont       = count($nombre);
+                if ($cont > 2 ) {
+                    $primer_ap = str_split($nombre[$cont-2]);
+                    $nombre_nu = $nombre[0].' '.$primer_ap[0].'.';
+                } else {
+                    $primer_ap = str_split($nombre[$cont-1]);
+                    $nombre_nu = $nombre[0].' '.$primer_ap[0].'.';
+                }
                 $bodyUsers .= '<tr>
                                    <td class="text-center"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-'.$contador.'">
                                        <input type="checkbox" id="checkbox-'.$contador.'" class="mdl-checkbox__input">
                                    </label></td>
-                                   <td class="js-flex"><img class="js-image" src="'.RUTA_IMG.'user/user2.jpg"><span>'.$key->nombre_completo.'</span></td>
+                                   <td class="js-flex"><img class="js-image" src="'.RUTA_IMG.'user/user2.jpg"><span>'.$nombre_nu.'</span></td>
                                    <td>'.$key->pais.'</td>
                                    <td>'.$key->empresa.'</td>
                                    <td>'.$key->cumpleanos.'</td>
@@ -113,6 +141,17 @@ class Directorio extends CI_Controller {
             $data['comboCanal'] = $comboCanal;
             $data['error']      = EXIT_SUCCESS;
         } catch (Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($data);
+    }
+    function buscadorTipo () {
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try{
+
+            $data['error']      = EXIT_SUCCESS;
+        } catch(Exception $e) {
             $data['msj'] = $e->getMessage();
         }
         echo json_encode($data);

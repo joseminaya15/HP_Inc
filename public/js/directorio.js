@@ -3,15 +3,15 @@ function buscador() {
 	var pais  	= $('#pais').val();
 	var canal 	= $('#canal').val();
 	var persona = $('#persona').val();
-	// var pais = $('#pais').val();
-	// var pais = $('#pais').val();
-	// var pais = $('#pais').val();
-	// var pais = $('#pais').val();
+	var fechaIni= $('#fechainicio').val();
+	var fechaFin= $('#fechafin').val();
 	canal = (paisGlobal != pais) ? null : canal; 
 	$.ajax({
 		data: { pais    : pais,
 				canal   : canal,
-				persona : persona },
+				persona : persona,
+				fechaIni: fechaIni,
+				fechaFin: fechaFin },
 		url:  'directorio/buscador',
 		type: 'POST'
 	}).done(function(data){
@@ -28,6 +28,7 @@ function buscador() {
 					$('#canal').selectpicker('refresh');	
 				}
 				paisGlobal = pais;
+				componentHandler.upgradeAllRegistered();
 			} else {
 		        toastr.remove();
 		        msj('error', data.error);
