@@ -38,7 +38,6 @@ function buscador() {
 		}
 	});
 }
-
 function buscadorTipo() {
 	var tipo = $().val();
 	$.ajax({
@@ -59,4 +58,7 @@ function buscadorTipo() {
 			msj('error', err.message);
 		}
 	});
+}
+function preview(){
+	
 }
