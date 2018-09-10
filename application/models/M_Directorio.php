@@ -18,7 +18,8 @@ class M_Directorio extends  CI_Model{
     	return $result->result();
     }
     function getUsers($pais, $canal, $persona, $fechaIni, $fechaFin){
-        $andPais = ($pais == null) ? '' : "AND c.pais LIKE '%".$pais."%' ";
+        $andPais  = ($pais == null) ? '' : " AND c.pais LIKE '%".$pais."%' ";
+        $andCanal = ($canal == null) ? '' : " AND c.empresa LIKE '".$canal."' ";
         if ($pais == null && $canal == null && $persona == null && $fechaIni == null && $fechaFin == null) {
             $sql = "SELECT c.* 
                       FROM champion c"; 
@@ -27,7 +28,8 @@ class M_Directorio extends  CI_Model{
                       FROM champion c,
                            pais p
                      WHERE c.pais = p.nombre 
-                     ".$andPais;
+                     ".$andPais
+                     .$andCanal;
         }
         $result = $this->db->query($sql);
         return $result->result();
