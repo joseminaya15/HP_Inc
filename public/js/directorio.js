@@ -63,5 +63,8 @@ function buscadorTipo() {
 	});
 }
 function preview(){
-	
+	$('#modalPreview').modal('show');
+	var url = document.getElementsByTagName('directorio.php');
+	console.log(url);
+	url.innerHTML();
 }
