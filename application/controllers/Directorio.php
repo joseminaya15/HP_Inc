@@ -50,7 +50,7 @@ class Directorio extends CI_Controller {
                                <td class="text-center"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-'.$contador.'">
                                    <input type="checkbox" id="checkbox-'.$contador.'" class="mdl-checkbox__input">
                                </label></td>
-                               <td class="js-flex"><img class="js-image" src="'.RUTA_IMG.'user/user2.jpg"><span>'.$nombre_nu.'</span></td>
+                               <td class="js-flex"><img class="js-image" src="'.RUTA_IMG.'user/nouser.png" data-toggle="tooltip" data-placement="bottom" title="'.$key->nombre_completo.'"><span>'.$nombre_nu.'</span></td>
                                <td>'.$key->pais.'</td>
                                <td>'.$key->empresa.'</td>
                                <td>'.$key->cumpleanos.'</td>
@@ -117,7 +117,7 @@ class Directorio extends CI_Controller {
                                    <td class="text-center"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-'.$contador.'">
                                        <input type="checkbox" id="checkbox-'.$contador.'" class="mdl-checkbox__input">
                                    </label></td>
-                                   <td class="js-flex"><img class="js-image" src="'.RUTA_IMG.'user/user2.jpg"><span>'.$nombre_nu.'</span></td>
+                                   <td class="js-flex"><img class="js-image" src="'.RUTA_IMG.'user/nouser.png" data-toggle="tooltip" data-placement="bottom" title="'.$key->nombre_completo.'"><span>'.$nombre_nu.'</span></td>
                                    <td>'.$key->pais.'</td>
                                    <td>'.$key->empresa.'</td>
                                    <td>'.$key->cumpleanos.'</td>

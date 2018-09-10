@@ -341,6 +341,9 @@
             initButtonCalendar('fechainicio');
             initButtonCalendar('fechafin');
             initMaskInputs('fechainicio','fechafin');
+            $(document).ready(function(){
+                $('[data-toggle="tooltip"]').tooltip(); 
+            });
         </script>
     </body>
 </html>
