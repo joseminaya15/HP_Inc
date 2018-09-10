@@ -31,7 +31,7 @@ class Directorio extends CI_Controller {
             $comboPais .= '<option value="'.$key->nombre.'">'.$key->nombre.'</option>';
         }
         foreach ($tipo as $key) {
-            $comboTipo .= '<option value="'.$key->tipo_saludo.'">'.$key->tipo_saludo.'</option>';
+            $comboTipo .= '<option value="'.$key->id.'">'.$key->tipo_saludo.'</option>';
         }
         foreach ($canal as $key) {
             $comboCanal .= '<option value="'.$key->empresa.'">'.$key->empresa.'</option>';
@@ -149,8 +149,28 @@ class Directorio extends CI_Controller {
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try{
-
-            $data['error']      = EXIT_SUCCESS;
+            $eblast = '';
+            $tipo   = $this->input->post('tipo');
+            $datos  = $this->M_Directorio->getEblast($tipo);
+            $contador = 1;
+            foreach ($datos as $key) {
+                $transform = ( $contador == 2 ) ? 'js-transform' : '';
+                $checked   = ( $contador == 2 ) ? 'checked' : '';
+                $eblast .= '<div class="js-card '.$transform.'">
+                                <div class="js-card__contenido">
+                                    <img src="'.RUTA_IMG.'template/'.$key->nombre.'.png">
+                                </div>
+                                <div class="js-card__select">
+                                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-'.$contador.'">
+                                        <input type="radio" id="option-'.$contador.'" class="mdl-radio__button" name="options-'.$key->id_tipo_saludo.'" value="'.$contador.'" onclick="selectTemplate(this.id)" '.$checked.'>
+                                        <span class="mdl-radio__label">Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>';
+                $contador++;
+            }
+            $data['eblast'] = $eblast;
+            $data['error']  = EXIT_SUCCESS;
         } catch(Exception $e) {
             $data['msj'] = $e->getMessage();
         }

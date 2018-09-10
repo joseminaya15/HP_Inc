@@ -50,4 +50,11 @@ class M_Directorio extends  CI_Model{
         $result = $this->db->query($sql);
         return $result->result();
     }
+    function getEblast($tipo){
+        $sql = "SELECT *
+                  FROM eblast
+                 WHERE id_tipo_saludo = ? ";
+        $result = $this->db->query($sql, array($tipo));
+        return $result->result();
+    }
 }

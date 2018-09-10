@@ -40,16 +40,18 @@ function buscador() {
 	});
 }
 function buscadorTipo() {
-	var tipo = $().val();
+	var tipo = $('#tipo').val();
 	$.ajax({
-		data : {},
+		data : { tipo : tipo },
 		url  : 'directorio/buscadorTipo',
 		type : 'POST'
 	}).done(function(data){
 		try {
 			data = JSON.parse(data);
 			if (data.error == 0) {
-
+				$('#eblast').html('');
+				$('#eblast').append(data.eblast);
+				componentHandler.upgradeAllRegistered();
 			} else {
 				toastr.remove();
 				msj('error', data.msj);
