@@ -46,10 +46,10 @@
                         </select>
                     </div>
                     <div class="js-form">
-                        <input type="text" id="fechafin" class="form-control" placeholder="Buscar por persona">
+                        <input type="text" id="persona" class="form-control" placeholder="Buscar por persona" onchange="buscador();">
                     </div>
                     <div class="js-select">
-                        <select name="tipo" id="tipo" title="Tipo" onchange=""> 
+                        <select name="tipo" id="tipo" title="Tipo" onchange="buscadorTipo();"> 
                             <?php echo $comboTipo?>
                         </select>
                     </div>

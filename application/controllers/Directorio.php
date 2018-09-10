@@ -14,9 +14,9 @@ class Directorio extends CI_Controller {
     }
 	public function index(){
         $comboTipo  = '';
-        $comboCanal = '';
-        $comboPais  = '<option value="">Seleccionar Todo</option>';
         $bodyUsers  = '';
+        $comboCanal = '<option value="">Seleccionar Todo</option>';
+        $comboPais  = '<option value="">Seleccionar Todo</option>';
         $paises     = $this->M_Directorio->getPaises();
         $tipo       = $this->M_Directorio->getTipoMensaje();
         $canal      = $this->M_Directorio->getCanales(null);
@@ -76,10 +76,11 @@ class Directorio extends CI_Controller {
         $data['msj']   = null;
         try {
             $bodyUsers  = '';
-            $comboCanal = '';
+            $comboCanal = '<option value="">Seleccionar Todo</option>';
             $pais       = $this->input->post('pais');
             $canal      = $this->input->post('canal');
-            $users      = $this->M_Directorio->getUsers($pais,$canal,null,null,null);
+            $persona    = $this->input->post('persona');
+            $users      = $this->M_Directorio->getUsers($pais,$canal,$persona,null,null);
             $canal      = $this->M_Directorio->getCanales($pais);
             $totaUser   = count($users);
             $contador   = 1;
