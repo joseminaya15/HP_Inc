@@ -85,7 +85,7 @@
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="js-form">
-                                <input type="text" id="fechaInicio" name="fechaInicio" maxlength="10" class="form-control" placeholder="Fecha Inicio" onchange="validar();">
+                                <input type="text" id="fechaNacimiento" name="fechaNacimiento" maxlength="10" class="form-control" placeholder="Fecha Inicio" onchange="validar();">
                                 <div class="js-icon">
                                     <button class="mdl-button mdl-js-button mdl-button--icon">
                                         <i class="mdi mdi-date_range"></i>
@@ -95,7 +95,7 @@
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="js-form">
-                                <input type="text" id="fechafin" name="fechafin" maxlength="10" class="form-control" placeholder="Fecha Final" onchange="validar();">
+                                <input type="text" id="fechaIngreso" name="fechaIngreso" maxlength="10" class="form-control" placeholder="Fecha Final" onchange="validar();">
                                 <div class="js-icon">
                                     <button class="mdl-button mdl-js-button mdl-button--icon">
                                         <i class="mdi mdi-date_range"></i>
