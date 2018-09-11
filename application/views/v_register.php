@@ -30,25 +30,53 @@
         </div>
         <section class="js-section js-height">
             <div class="js-container js-flex">
-                <div class="js-login">
-                    <h2>No dejes para ma&ntilde;ana lo que puedes gestionar hoy</h2>
-                    <div class="js-input">
-                        <input type="text" id="usuario" class="form-control" placeholder="Correo" onkeyup="verificarDatos(event);">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <img src="<?php echo RUTA_IMG?>logo/icon-login.png">
                     </div>
-                    <div class="js-input">
-                        <input type="password" id="password" class="form-control" placeholder="Contraseña" onkeyup="verificarDatos(event);">
-                    </div>
-                    <div class="js-flex">
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-button--login" onclick="ingresar()">Ingresar</button>
-                        <div class="js-radio">
-                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="remember">
-                                <input type="checkbox" id="remember" class="mdl-checkbox__input">
-                                <span class="mdl-checkbox__label">Recuerdame</span>
-                            </label>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="js-input">
+                                <input type="text" id="usuario" class="form-control" placeholder="Correo" onkeyup="verificarDatos(event);">
+                            </div>
                         </div>
-                        <a href="">¿Olvidaste tu contrase&ntilde;a?</a>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="js-input">
+                                <input type="text" id="usuario" class="form-control" placeholder="Correo" onkeyup="verificarDatos(event);">
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="js-input">
+                                <input type="text" id="usuario" class="form-control" placeholder="Correo" onkeyup="verificarDatos(event);">
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="js-input">
+                                <input type="password" id="usuario" class="form-control" placeholder="Correo" onkeyup="verificarDatos(event);">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            
+                        </div>
+                        <div class="col-xs-12">
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-button--login" onclick="ingresar()">Ingresar</button>
+                        </div>
                     </div>
-                    <img src="<?php echo RUTA_IMG?>logo/icon-login.png">
                 </div>
             </div>
         </section>
@@ -62,20 +90,7 @@
         <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jslogin.js?v=<?php echo time();?>"></script>
         <script type="text/javascript">
-            $(document).ready(function(){
-                let CHECK = sessionStorage.getItem('CHECK');
-                let USERNAME = sessionStorage.getItem('USERNAME');
-                let PASS = sessionStorage.getItem('PASS');
-                if(CHECK == 1) {
-                    $('#checkbox-2').prop('checked', true);
-                    $('#usuario').val(USERNAME);
-                    $('#password').val(PASS);
-                }else {
-                    $('#checkbox-2').prop('checked', false);
-                    $('#usuario').val('');
-                    $('#password').val('');
-                }
-            });
+
         </script>
     </body>
 </html>
