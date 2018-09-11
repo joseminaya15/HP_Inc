@@ -33,16 +33,17 @@ class Register extends CI_Controller {
 			$cumpleano= $this->input->post();
 			$ingreso  = $this->input->post();
 			$sexo     = $this->input->post();
-			$arrayInsert('nombre_completo' => $nombre.' '.$apellido,
-						 'correo' 		   => $correo,
-						 'password' 	   => $pass,
-						 'cumpleanos' 	   => $cumpleano,
-						 'pais' 		   => $pais,
-						 'empresa' 		   => $empresa,
-						 'cargo' 		   => $cargo,
-						 'celular' 		   => $celular,
-						 'ingreso_empresa' => $ingreso,
-						 'sexo' 		   => $sexo);
+			$nombre_completo = ($nombre.' '.$apellido);
+			$arrayInsert = array('nombre_completo' => $nombre_completo,
+								 'correo' 		   => $correo,
+								 'password' 	   => $pass,
+								 'cumpleanos' 	   => $cumpleano,
+								 'pais' 		   => $pais,
+								 'empresa' 		   => $empresa,
+								 'cargo' 		   => $cargo,
+								 'celular' 		   => $celular,
+								 'ingreso_empresa' => $ingreso,
+								 'sexo' 		   => $sexo);
 			$this->M_Directorio->insertRegistro($arrayInsert, 'champion');
             $data['error']  = EXIT_SUCCESS;
 		} catch (Exception $ex) {
