@@ -20,7 +20,7 @@ class Register extends CI_Controller {
 
 	function register() {
 		$data['error'] = EXIT_ERROR;
-		$data['msj']   = ''
+		$data['msj']   = '';
 		try{
 			$nombre   = $this->input->post();
 			$apellido = $this->input->post();

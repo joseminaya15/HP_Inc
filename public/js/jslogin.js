@@ -50,10 +50,58 @@ function registrar() {
     var fechaNacimiento = $('#fechaNacimiento').val();
     var fechaIngreso    = $('#fechaIngreso').val();
 
+    if(nombre == '') {
+        toastr.remove();
+        msj('error', 'Complete su nombre.');
+    }
+    if(apellido == '') {
+        toastr.remove();
+        msj('error', 'Complete su apellido.');
+    }
+    if(correo == '') {
+        toastr.remove();
+        msj('error', 'Complete su correo.');
+    }
+    if(password == '') {
+        toastr.remove();
+        msj('error', 'Complete su password.');
+    }
+    if(empresa == '') {
+        toastr.remove();
+        msj('error', 'Complete su empresa.');
+    }
+    if(pais == '') {
+        toastr.remove();
+        msj('error', 'Seleccione su pais.');
+    }
+    if(cargo == '') {
+        toastr.remove();
+        msj('error', 'Complete su cargo.');
+    }
+    if(celular == '') {
+        toastr.remove();
+        msj('error', 'Complete su celular.');
+    }
+    if(fechaNacimiento == '') {
+        toastr.remove();
+        msj('error', 'Complete su fechaNacimiento.');
+    }
+    if(fechaIngreso == '') {
+        toastr.remove();
+        msj('error', 'Complete su fechaIngreso.');
+    }
+    
     $.ajax({
-        data : {
-
-        },
+        data : {nombre          : nombre,
+                apellido        : apellido,
+                correo          : correo,
+                password        : password,
+                empresa         : empresa,
+                pais            : pais,
+                cargo           : cargo,
+                celular         : celular,
+                fechaNacimiento : fechaNacimiento,
+                fechaIngreso    : fechaIngreso },
         url  : 'Register/register',
         type : 'POST'
     }).done(function(data){
