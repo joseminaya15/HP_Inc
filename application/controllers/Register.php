@@ -22,19 +22,18 @@ class Register extends CI_Controller {
 		$data['error'] = EXIT_ERROR;
 		$data['msj']   = '';
 		try{
-			$nombre   = $this->input->post();
-			$apellido = $this->input->post();
-			$correo   = $this->input->post();
-			$pass	  = $this->input->post();
-			$empresa  = $this->input->post();
-			$pais	  = $this->input->post();
-			$cargo    = $this->input->post();
-			$celular  = $this->input->post();
-			$cumpleano= $this->input->post();
-			$ingreso  = $this->input->post();
+			$nombre   = $this->input->post('nombre');
+			$apellido = $this->input->post('apellido');
+			$correo   = $this->input->post('correo');
+			$pass	  = $this->input->post('password');
+			$empresa  = $this->input->post('empresa');
+			$pais	  = $this->input->post('pais');
+			$cargo    = $this->input->post('cargo');
+			$celular  = $this->input->post('celular');
+			$cumpleano= $this->input->post('fechaNacimiento');
+			$ingreso  = $this->input->post('fechaIngreso');
 			$sexo     = $this->input->post();
-			$nombre_completo = ($nombre.' '.$apellido);
-			$arrayInsert = array('nombre_completo' => $nombre_completo,
+			$arrayInsert = array('nombre_completo' => $nombre.' '.$apellido,
 								 'correo' 		   => $correo,
 								 'password' 	   => $pass,
 								 'cumpleanos' 	   => $cumpleano,

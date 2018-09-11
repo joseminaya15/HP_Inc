@@ -84,13 +84,13 @@ function registrar() {
     }
     if(fechaNacimiento == '') {
         toastr.remove();
-        msj('error', 'Complete su fechaNacimiento.');
+        msj('error', 'Complete su fecha de nacimiento.');
     }
     if(fechaIngreso == '') {
         toastr.remove();
-        msj('error', 'Complete su fechaIngreso.');
+        msj('error', 'Complete su fecha de ingreso.');
     }
-    
+
     $.ajax({
         data : {nombre          : nombre,
                 apellido        : apellido,
