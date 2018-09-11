@@ -29,9 +29,9 @@
             </div>
         </div>
         <section class="js-section js-height">
-            <div class="js-container js-flex">
+            <div class="js-container js-flex js-register">
                 <div class="row">
-                    <div class="col-md-6 col-sm-6">
+                    <div class="col-md-6 col-sm-6 text-center">
                         <img src="<?php echo RUTA_IMG?>logo/icon-login.png">
                         <p>Construyamos juntos un mejor equipo</p>
                     </div>
@@ -82,7 +82,7 @@
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="js-form">
-                                <input type="text" id="fechafin" name="fechafin" maxlength="10" class="form-control" placeholder="Fecha Final" onchange="validar();">
+                                <input type="text" id="fechaInicio" name="fechaInicio" maxlength="10" class="form-control" placeholder="Fecha Inicio" onchange="validar();">
                                 <div class="js-icon">
                                     <button class="mdl-button mdl-js-button mdl-button--icon">
                                         <i class="mdi mdi-date_range"></i>
@@ -99,6 +99,9 @@
                                     </button>
                                 </div>
                             </div>
+                        </div>
+                        <div class="">
+                            
                         </div>
                         <div class="col-xs-12">
                             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-button--login" onclick="ingresar()">Ingresar</button>
