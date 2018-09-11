@@ -64,7 +64,7 @@
                         <div class="col-md-6 col-sm-6">
                             <div class="js-input js-select">
                                 <select name="empresa" id="empresa" title="Empresa">
-
+                                    <?php echo $comboCanal ?>
                                 </select>
                             </div>
                         </div>

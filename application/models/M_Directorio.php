@@ -75,4 +75,11 @@ class M_Directorio extends  CI_Model{
         }
         return array("error" => EXIT_SUCCESS, "msj" => MSJ_INS, "Id" => $sql);
     }
+    function buscarEmpresa($nombre) {
+        $sql = "SELECT empresa 
+                  FROM champion
+                 WHERE empresa LIKE ?";
+        $result = $this->db->query($sql, array('%'.$nombre.'%'));
+        return $result->result();
+    }
 }

@@ -49,7 +49,8 @@ function registrar() {
     var celular         = $('#celular').val();
     var fechaNacimiento = $('#fechaNacimiento').val();
     var fechaIngreso    = $('#fechaIngreso').val();
-
+    var sexo            = $('.mdl-radio.is-checked').find('input').val();
+    sexo = (sexo == 1) ? 'Hombre' : 'Mujer';
     if(nombre == '') {
         toastr.remove();
         msj('error', 'Complete su nombre.');
@@ -111,7 +112,8 @@ function registrar() {
                 cargo           : cargo,
                 celular         : celular,
                 fechaNacimiento : fechaNacimiento,
-                fechaIngreso    : fechaIngreso },
+                fechaIngreso    : fechaIngreso,
+                sexo            : sexo },
         url  : 'Register/register',
         type : 'POST'
     }).done(function(data){
