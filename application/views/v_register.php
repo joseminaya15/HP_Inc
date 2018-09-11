@@ -105,8 +105,17 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="">
-                            
+                        <div class="col-md-3 col-sm-4 col-xs-6">
+                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                                <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1">
+                                <span class="mdl-radio__label">Hombre</span>
+                            </label>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-6">
+                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+                                <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
+                                <span class="mdl-radio__label">Mujer</span>
+                            </label>
                         </div>
                         <div class="col-xs-12">
                             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-button--login" onclick="registrar()">Registrar</button>
