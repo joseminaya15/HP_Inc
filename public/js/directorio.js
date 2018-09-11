@@ -68,3 +68,14 @@ function preview(){
 	console.log(url);
 	url.innerHTML();
 }
+function selectAll() {
+	$('.mdl-js-checkbox').addClass('is-checked');
+}
+function removeAll(){
+	$('.mdl-js-checkbox').removeClass('is-checked');	
+}
+function limpiar(){
+	$('.mdl-js-checkbox').removeClass('is-checked');
+	$('.js-select').selectpicker(0);
+	$('.js-select').selectpicker('refresh');
+}

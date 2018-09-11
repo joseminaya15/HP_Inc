@@ -83,10 +83,9 @@
                     <div class="col-md-6">
                         <div class="js-usuarios">
                             <div class="js-usuarios--menu">
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button--usuario">Seleccionar Todo</button>
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button--usuario">Borrar Selecci&Oacute;n</button>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button--usuario" onclick="selectAll();">Seleccionar Todo</button>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button--usuario" onclick="removeAll();">Limpiar</button>
                                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button--usuario">Mostrar solo seleccionados</button>
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button--usuario">Limpiar</button>
                             </div>
                             <div class="table-responsive js-table">
                                 <table id="example" class="display nowrap table table-hover dt-responsive" cellspacing="0" width="100%">
