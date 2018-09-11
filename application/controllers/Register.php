@@ -18,7 +18,7 @@ class Register extends CI_Controller {
 		$this->load->view('v_register');
 	}
 
-	function registrar() {
+	function register() {
 		$data['error'] = EXIT_ERROR;
 		$data['msj']   = ''
 		try{

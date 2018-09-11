@@ -22,10 +22,12 @@ function ingresar(){
                 $('#usuario').val("");
                 $('#password').val("");
             }else {
+                toastr.remove();
                 msj('error', data.msj);
                 return;
             }
         }catch(err){
+            toastr.remove();
             msj('error',err.message);
         }
     });
@@ -48,5 +50,26 @@ function registrar() {
     var fechaNacimiento = $('#fechaNacimiento').val();
     var fechaIngreso    = $('#fechaIngreso').val();
 
-    
+    $.ajax({
+        data : {
+
+        },
+        url  : 'Register/register',
+        type : 'POST'
+    }).done(function(data){
+        try {
+            data = JSON.parse(data);
+            if(data.error == 0) {
+                msj('success', data.msj);
+                location.href = 'login';
+            } else {
+                toastr.remove();
+                msj('error', data.msj);
+                return;
+            }
+        } catch(err) {
+            toastr.remove();
+            msj('error', err.message);
+        }
+    });
 }
