@@ -30,12 +30,15 @@
         </div>
         <section class="js-section js-height">
             <div class="js-container js-flex js-register">
-                <div class="row">
+                <div class="row js-flex">
                     <div class="col-md-6 col-sm-6 text-center">
                         <img src="<?php echo RUTA_IMG?>logo/icon-login.png">
                         <p>Construyamos juntos un mejor equipo</p>
                     </div>
                     <div class="col-md-6 col-sm-6">
+                        <div class="col-xs-12 js-register__title">
+                            <h2>Reg&iacute;strate</h2>
+                        </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="js-input">
                                 <input type="text" id="nombre" class="form-control" placeholder="Nombre">
