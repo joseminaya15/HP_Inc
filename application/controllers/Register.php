@@ -15,7 +15,13 @@ class Register extends CI_Controller {
 
 	public function index() {
 		$this->session->unset_userdata('usuario');
-		$this->load->view('v_register');
+        $comboPais  = '<option value="">Seleccionar Todo</option>';
+        $paises     = $this->M_Directorio->getPaises();
+        foreach ($paises as $key) {
+            $comboPais .= '<option value="'.$key->nombre.'">'.$key->nombre.'</option>';
+        }
+		$data['comboPais'] = $comboPais;
+		$this->load->view('v_register', $data);
 	}
 
 	function register() {

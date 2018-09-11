@@ -71,7 +71,7 @@
                         <div class="col-md-6 col-sm-6">
                             <div class="js-input js-select">
                                 <select name="pais" id="pais" title="País">
-                                 
+                                    <?php echo $comboPais ?>
                                 </select>
                             </div>
                         </div>
@@ -87,7 +87,7 @@
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="js-form">
-                                <input type="text" id="fechaNacimiento" name="fechaNacimiento" maxlength="10" class="form-control" placeholder="Fecha de nacimiento" onchange="validar();">
+                                <input type="text" id="fechaNacimiento" name="fechaNacimiento" maxlength="10" class="form-control" placeholder="Fecha de nacimiento">
                                 <div class="js-icon">
                                     <button class="mdl-button mdl-js-button mdl-button--icon">
                                         <i class="mdi mdi-date_range"></i>
@@ -97,7 +97,7 @@
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="js-form">
-                                <input type="text" id="fechaIngreso" name="fechaIngreso" maxlength="10" class="form-control" placeholder="Fecha de ingreso empresa" onchange="validar();">
+                                <input type="text" id="fechaIngreso" name="fechaIngreso" maxlength="10" class="form-control" placeholder="Fecha de ingreso empresa">
                                 <div class="js-icon">
                                     <button class="mdl-button mdl-js-button mdl-button--icon">
                                         <i class="mdi mdi-date_range"></i>
