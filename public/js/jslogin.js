@@ -53,42 +53,52 @@ function registrar() {
     if(nombre == '') {
         toastr.remove();
         msj('error', 'Complete su nombre.');
+        return;
     }
     if(apellido == '') {
         toastr.remove();
         msj('error', 'Complete su apellido.');
+        return;
     }
     if(correo == '') {
         toastr.remove();
         msj('error', 'Complete su correo.');
+        return;
     }
     if(password == '') {
         toastr.remove();
         msj('error', 'Complete su password.');
+        return;
     }
     if(empresa == '') {
         toastr.remove();
         msj('error', 'Complete su empresa.');
+        return;
     }
     if(pais == '') {
         toastr.remove();
         msj('error', 'Seleccione su pais.');
+        return;
     }
     if(cargo == '') {
         toastr.remove();
         msj('error', 'Complete su cargo.');
+        return;
     }
     if(celular == '') {
         toastr.remove();
         msj('error', 'Complete su celular.');
+        return;
     }
     if(fechaNacimiento == '') {
         toastr.remove();
         msj('error', 'Complete su fecha de nacimiento.');
+        return;
     }
     if(fechaIngreso == '') {
         toastr.remove();
         msj('error', 'Complete su fecha de ingreso.');
+        return;
     }
 
     $.ajax({

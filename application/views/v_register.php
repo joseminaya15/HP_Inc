@@ -107,7 +107,7 @@
                             
                         </div>
                         <div class="col-xs-12">
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-button--login" onclick="ingresar()">Ingresar</button>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-button--login" onclick="registrar()">Registrar</button>
                         </div>
                     </div>
                 </div>
