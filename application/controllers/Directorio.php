@@ -221,7 +221,6 @@ class Directorio extends CI_Controller {
                                  'estado'         => ESTADO_PENDIENTE,
                                  'id_eblast'      => $eblast );
             $insetDatos  = $this->M_Directorio->insertarDatos($arrayInsert, 'saludo_programado');
-            $data['eblast'] = $eblast;
             $data['error']  = EXIT_SUCCESS;
         } catch(Exception $e) {
             $data['msj'] = $e->getMessage();
