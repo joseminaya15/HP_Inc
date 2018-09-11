@@ -20,6 +20,7 @@
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>simplified.css?v=<?php echo time();?>">
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
+        <link rel="stylesheet"    href="<?php echo RUTA_CSS?>index.css?v=<?php echo time();?>">
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
     </head>
     <body>
@@ -125,6 +126,7 @@
         <script src="<?php echo RUTA_PLUGINS?>jquery-mask/jquery.mask.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
+        <script src="<?php echo RUTA_JS?>jsmenu.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jslogin.js?v=<?php echo time();?>"></script>
         <script type="text/javascript">
             if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
