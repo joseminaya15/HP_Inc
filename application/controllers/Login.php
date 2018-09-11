@@ -12,7 +12,7 @@ class Login extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 
-	public function index() {
+	function index() {
 		$this->session->unset_userdata('usuario');
 		$this->load->view('v_login');
 	}

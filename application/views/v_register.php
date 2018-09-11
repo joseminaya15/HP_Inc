@@ -33,45 +33,72 @@
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
                         <img src="<?php echo RUTA_IMG?>logo/icon-login.png">
+                        <p>Construyamos juntos un mejor equipo</p>
                     </div>
                     <div class="col-md-6 col-sm-6">
                         <div class="col-md-6 col-sm-6">
                             <div class="js-input">
-                                <input type="text" id="usuario" class="form-control" placeholder="Correo" onkeyup="verificarDatos(event);">
+                                <input type="text" id="nombre" class="form-control" placeholder="Nombre">
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="js-input">
-                                <input type="text" id="usuario" class="form-control" placeholder="Correo" onkeyup="verificarDatos(event);">
+                                <input type="text" id="apellido" class="form-control" placeholder="Apellido">
                             </div>
                         </div>
                         <div class="col-xs-12">
                             <div class="js-input">
-                                <input type="text" id="usuario" class="form-control" placeholder="Correo" onkeyup="verificarDatos(event);">
+                                <input type="text" id="correo" class="form-control" placeholder="Correo">
                             </div>
                         </div>
                         <div class="col-xs-12">
                             <div class="js-input">
-                                <input type="password" id="usuario" class="form-control" placeholder="Correo" onkeyup="verificarDatos(event);">
+                                <input type="password" id="password" class="form-control" placeholder="Contraseña">
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
-                            
+                            <div class="js-input js-select">
+                                <select name="empresa" id="empresa" title="Empresa">
+
+                                </select>
+                            </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
-                            
+                            <div class="js-input js-select">
+                                <select name="pais" id="pais" title="País">
+                                 
+                                </select>
+                            </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
-                            
+                            <div class="js-input">
+                                <input type="text" id="cargo" class="form-control" placeholder="Cargo">
+                            </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
-                            
+                            <div class="js-input">
+                                <input type="text" id="celular" class="form-control" placeholder="Celular">
+                            </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
-                            
+                            <div class="js-form">
+                                <input type="text" id="fechafin" name="fechafin" maxlength="10" class="form-control" placeholder="Fecha Final" onchange="validar();">
+                                <div class="js-icon">
+                                    <button class="mdl-button mdl-js-button mdl-button--icon">
+                                        <i class="mdi mdi-date_range"></i>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
-                            
+                            <div class="js-form">
+                                <input type="text" id="fechafin" name="fechafin" maxlength="10" class="form-control" placeholder="Fecha Final" onchange="validar();">
+                                <div class="js-icon">
+                                    <button class="mdl-button mdl-js-button mdl-button--icon">
+                                        <i class="mdi mdi-date_range"></i>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-xs-12">
                             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-button--login" onclick="ingresar()">Ingresar</button>
@@ -90,7 +117,11 @@
         <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jslogin.js?v=<?php echo time();?>"></script>
         <script type="text/javascript">
-
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+                $('select').selectpicker('mobile');
+            } else {
+                $('select').selectpicker();
+            }
         </script>
     </body>
 </html>
