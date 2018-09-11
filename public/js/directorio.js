@@ -74,8 +74,56 @@ function selectAll() {
 function removeAll(){
 	$('.mdl-js-checkbox').removeClass('is-checked');	
 }
-function limpiar(){
-	$('.mdl-js-checkbox').removeClass('is-checked');
-	$('.js-select').selectpicker(0);
-	$('.js-select').selectpicker('refresh');
+function validar(){
+	var tipo 	 = $('#tipo').val();
+	var fechaIni = $('#fechainicio').val();
+	var fechaFin = $('#fechafin').val();
+	if(tipo == '' || fechaIni == '' || fechaFin == '') {
+		$('#guardar').attr('disabled');
+	} else {
+		$('#guardar').removeAttr('disabled');
+	}
+}
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1;
+var yy = today.getFullYear();
+var arrayIds    = [];
+function saveConfig(){
+	dd = (dd<10) ? '0'+dd : dd; 
+	dd = (mm<10) ? '0'+mm : mm;
+	today = dd + '/' + mm + '/' + yy;
+	var tipo 	 = $('#tipo').val();
+	var fechaIni = ($('#fechainicio').val() == '') ? today : $('#fechainicio').val();
+	var fechaFin = ($('#fechafin').val() == '') ? $('#fechainicio').val() : $('#fechafin').val() ;
+	var eblast 	 = $('.js-transform').find('.is-checked').find('input').attr('data-id');
+	fechaIni = fechaIni.split("/").reverse().join("-");
+	fechaFin = fechaFin.split("/").reverse().join("-");
+	$(".mdl-checkbox.is-checked").each(function (){
+		var isChecked = $(this);
+		var user 	  = isChecked.find('input').attr('data-id');
+		arrayIds.push(user);
+    })
+	$.ajax({
+		data : { tipo 	  : tipo,
+				 fechaIni : fechaIni,
+				 fechaFin : fechaFin,
+				 user 	  : arrayIds,
+				 eblast   : eblast },
+		url  : 'directorio/guardarProgramacion',
+		type : 'POST'
+	}).done(function (data){
+		try{
+			data = JSON.parse(data);
+			if(data.error == 0) {
+				$('.mdl-js-checkbox').removeClass('is-checked');
+			} else {
+				toastr.remove();
+				msj('msj', data.msj);
+			}
+		} catch(err) {
+			toastr.remove();
+			msj('error', err.message);
+		}
+	});
 }

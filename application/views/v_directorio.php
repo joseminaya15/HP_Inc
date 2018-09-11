@@ -56,12 +56,12 @@
                         </div>
                     </div>
                     <div class="js-select">
-                        <select name="tipo" id="tipo" title="Tipo" onchange="buscadorTipo();"> 
+                        <select name="tipo" id="tipo" title="Tipo" onchange="buscadorTipo(); validar();"> 
                             <?php echo $comboTipo?>
                         </select>
                     </div>
                     <div class="js-form">
-                        <input type="text" id="fechainicio" name="fechainicio" maxlength="10" class="form-control" placeholder="Fecha de Inicio">
+                        <input type="text" id="fechainicio" name="fechainicio" maxlength="10" class="form-control" placeholder="Fecha de Inicio" onchange="validar();">
                         <div class="js-icon">
                             <button class="mdl-button mdl-js-button mdl-button--icon">
                                 <i class="mdi mdi-date_range"></i>
@@ -69,14 +69,14 @@
                         </div>
                     </div>
                     <div class="js-form">
-                        <input type="text" id="fechafin" name="fechafin" maxlength="10" class="form-control" placeholder="Fecha Final">
+                        <input type="text" id="fechafin" name="fechafin" maxlength="10" class="form-control" placeholder="Fecha Final" onchange="validar();">
                         <div class="js-icon">
                             <button class="mdl-button mdl-js-button mdl-button--icon">
                                 <i class="mdi mdi-date_range"></i>
                             </button>
                         </div>
                     </div>
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-configuracion">Guardar configuraci&oacute;n</button>
+                    <button id="guardar" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-configuracion" onclick="saveConfig();" disabled>Guardar configuraci&oacute;n</button>
                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-preview" onclick="preview()">Preview</button>
                 </div>
                 <div class="row m-t-20">
@@ -110,39 +110,7 @@
                         <div class="js-template">
                             <p class="m-b-30">Elige aqu&iacute; el template a usar</p>
                             <div id="eblast">
-                                <div class="js-card">
-                                    <div class="js-card__contenido">
-                                        <img src="<?php echo RUTA_IMG?>template/template1.png">
-                                    </div>
-                                    <div class="js-card__select">
-                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-                                            <input type="radio" id="option-1" class="mdl-radio__button" name="options-1" value="1" onclick="selectTemplate(this.id)">
-                                            <span class="mdl-radio__label">Seleccionar</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="js-card js-transform">
-                                    <div class="js-card__contenido">
-                                        <img src="<?php echo RUTA_IMG?>template/template2.png">
-                                    </div>
-                                    <div class="js-card__select">
-                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
-                                            <input type="radio" id="option-2" class="mdl-radio__button" name="options-1" value="2" onclick="selectTemplate(this.id)" checked>
-                                            <span class="mdl-radio__label">Seleccionar</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="js-card">
-                                    <div class="js-card__contenido">
-                                        <img src="<?php echo RUTA_IMG?>template/template1.png">
-                                    </div>
-                                    <div class="js-card__select">
-                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
-                                            <input type="radio" id="option-3" class="mdl-radio__button" name="options-1" value="3" onclick="selectTemplate(this.id)">
-                                            <span class="mdl-radio__label">Seleccionar</span>
-                                        </label>
-                                    </div>
-                                </div>
+                                <?php echo $eblast?>
                             </div>
                         </div>
                     </div>
